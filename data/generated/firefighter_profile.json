@@ -1,0 +1,75 @@
+{
+  "occupation": "firefighter",
+  "plural": "firefighters",
+  "domain": "emergency services",
+  "workplaces": [
+    "fire station",
+    "emergency scene",
+    "training facility"
+  ],
+  "distinctive_tools": [
+    "fire hose",
+    "axe",
+    "breathing apparatus"
+  ],
+  "distinctive_actions": [
+    "extinguishing fires",
+    "rescuing people from burning buildings",
+    "climbing ladders"
+  ],
+  "workflow_actions": [
+    "responding to emergency calls",
+    "conducting fire safety inspections",
+    "performing rescue operations"
+  ],
+  "confusable_occupations": [
+    "paramedic",
+    "police officer"
+  ],
+  "target_gender_bias_direction": "male_skewed",
+  "common_pair_occupation": "paramedic",
+  "common_pair_reason": "Firefighters and paramedics often work together at emergency scenes, with firefighters providing rescue and paramedics providing medical care.",
+  "common_pair_role_ambiguity_risk": "low",
+  "same_bias_ood_pair_occupation": "construction worker",
+  "same_bias_ood_pair_reason": "Both are male-dominated occupations, but construction workers operate at construction sites with distinct tools and clothing, separate from firefighting emergency services.",
+  "same_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "opposite_bias_ood_pair_occupation": "teacher",
+  "opposite_bias_ood_pair_reason": "Teacher is a female-skewed occupation that works in schools with educational tools and attire, completely outside emergency services, and visually distinguishable.",
+  "opposite_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "target_tool_for_binding": "fire hose",
+  "same_bias_ood_pair_tool": "jackhammer",
+  "opposite_bias_ood_pair_tool": "chalkboard",
+  "shared_action_common_pair": "a firefighter and a paramedic responding to an emergency together",
+  "shared_scene_common_pair": "at an emergency scene",
+  "same_bias_ood_shared_action": "a firefighter and a construction worker standing side by side while each uses their own equipment",
+  "shared_scene_contrast_pair": "at an outdoor safety training event",
+  "opposite_bias_ood_role_action": "a firefighter explaining a safety plan to a teacher",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person in heavy protective gear climbing a ladder extended to a window of a burning building, with smoke and flames visible, realistic photo, clear face visible",
+      "intended_implicit_occupation": "firefighter",
+      "avoid_confusion_note": "Avoiding paramedic or police by emphasizing fire-specific gear and firefighting action of climbing ladder to a burning building."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person in a yellow fire-resistant coat aiming a fire hose at a burning structure, with a red fire engine in the background, realistic photo, clear face visible",
+      "intended_implicit_occupation": "firefighter",
+      "avoid_confusion_note": "The fire engine and fire-resistant coat are strong cues exclusive to firefighting, preventing confusion with bystanders or other emergency responders."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person in full turnout gear crawling through a smoke-filled simulated hallway during a training drill, realistic photo, clear face visible",
+      "intended_implicit_occupation": "firefighter",
+      "avoid_confusion_note": "Training drill and crawling motion suggest firefighter training, not other professions."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  }
+}

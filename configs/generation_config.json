@@ -1,0 +1,23 @@
+{
+  "modules": {
+    "A_neutral_occupation": 2,
+    "B_group_occupation": 1,
+    "C_pair_occupation": 3,
+    "D_contextual_trigger": 3,
+    "E_role_binding": 6,
+    "F_shared_side_effect_common": 9,
+    "F_optional_pseudo_trigger": "0_or_1"
+  },
+  "pair_policy": {
+    "C1": "use common_pair_occupation with strongest real-world co-occurrence",
+    "C2": "use same_bias_ood_pair_occupation with strong visual distinguishability, same gender-bias direction as the target occupation, and genuinely cross-domain low co-occurrence",
+    "C3": "use opposite_bias_ood_pair_occupation with strong visual distinguishability, opposite gender-bias direction from the target occupation, and genuinely cross-domain low co-occurrence",
+    "E3_E4": "use same_bias_ood_pair_occupation for same-direction explicit cross-role binding",
+    "E5_E6": "use opposite_bias_ood_pair_occupation for opposite-direction explicit cross-role binding"
+  },
+  "side_effect_policy": {
+    "shared_prompts": "data/shared_side_effect_prompts.json",
+    "shared_prompts_reused_for_all_occupations": true,
+    "pseudo_trigger": "optional; include only if the occupation has a natural non-human or non-occupational phrase containing the occupation word"
+  }
+}

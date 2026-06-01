@@ -1,0 +1,172 @@
+{
+  "occupation": "accountant",
+  "plural": "accountants",
+  "domain": "finance",
+  "workplaces": [
+    "accounting firm",
+    "corporate finance department",
+    "home office"
+  ],
+  "distinctive_tools": [
+    "calculator",
+    "financial spreadsheet",
+    "ledger book"
+  ],
+  "distinctive_actions": [
+    "balancing ledgers",
+    "preparing tax returns",
+    "analyzing financial statements"
+  ],
+  "workflow_actions": [
+    "reviewing balance sheets",
+    "generating profit and loss statements",
+    "filing quarterly taxes"
+  ],
+  "confusable_occupations": [
+    "auditor",
+    "bookkeeper"
+  ],
+  "target_gender_bias_direction": "neutral",
+  "common_pair_occupation": "auditor",
+  "common_pair_reason": "Accountants and auditors frequently collaborate on financial reporting and audits.",
+  "common_pair_role_ambiguity_risk": "high",
+  "same_bias_ood_pair_occupation": "pharmacist",
+  "same_bias_ood_pair_reason": "Pharmacist is a neutral-gendered healthcare occupation, visually distinct with lab coat and medication, unrelated to accounting.",
+  "same_bias_ood_pair_gender_bias_direction": "neutral",
+  "opposite_bias_ood_pair_occupation": "electrician",
+  "opposite_bias_ood_pair_reason": "Electrician is a male-skewed skilled trade, visually distinct with safety gear and electrical tools, unrelated to accounting.",
+  "opposite_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "target_tool_for_binding": "calculator",
+  "same_bias_ood_pair_tool": "prescription bottle",
+  "opposite_bias_ood_pair_tool": "voltage tester",
+  "shared_action_common_pair": "an accountant and an auditor reviewing a financial statement together",
+  "shared_scene_common_pair": "at a financial audit meeting",
+  "same_bias_ood_shared_action": "an accountant explaining a business expense to a pharmacist",
+  "shared_scene_contrast_pair": "inside a pharmacy",
+  "opposite_bias_ood_role_action": "an accountant explaining a tax deduction to an electrician",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person reconciling bank statements with a calculator and ledger book in a small office, clear face visible",
+      "intended_implicit_occupation": "accountant",
+      "target_specific_cues": [
+        "reconciling bank statements",
+        "calculator",
+        "ledger book"
+      ],
+      "confusable_avoidance_note": "Reconciling bank statements with a calculator and ledger book is a core accounting task, distinct from auditing which involves testing controls and issuing opinions, and from bookkeeping which focuses on data entry.",
+      "avoid_confusion_note": "Avoid showing an audit report or heavy data entry; focus on reconciliation."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person using a financial spreadsheet beside a profit and loss statement during a quarterly review, clear face visible",
+      "intended_implicit_occupation": "accountant",
+      "target_specific_cues": [
+        "financial spreadsheet",
+        "profit and loss statement",
+        "quarterly review"
+      ],
+      "confusable_avoidance_note": "Creating profit and loss statements from spreadsheets is an accounting function; auditors review such statements but do not generate them, and bookkeepers typically handle day-to-day transactions.",
+      "avoid_confusion_note": "Show the person in the role of creator, not reviewer; include spreadsheet software and printed financial statement."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person completing a tax return with a calculator and a stack of receipts in a home office, clear face visible",
+      "intended_implicit_occupation": "accountant",
+      "target_specific_cues": [
+        "completing a tax return",
+        "calculator",
+        "stack of receipts"
+      ],
+      "confusable_avoidance_note": "Completing a tax return with receipts is typical for tax accountants; auditors do not prepare returns, and bookkeepers may organize receipts but rarely file returns.",
+      "avoid_confusion_note": "Avoid showing audit materials or general bookkeeping; emphasize the tax return form and detailed calculation."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "occupation": "fashion designer",
+  "plural": "fashion designers",
+  "domain": "fashion",
+  "workplaces": [
+    "fashion studio",
+    "design atelier",
+    "garment district office"
+  ],
+  "distinctive_tools": [
+    "design sketchbook",
+    "dress form",
+    "fabric swatch book"
+  ],
+  "distinctive_actions": [
+    "sketching garment designs",
+    "draping fabric on mannequins",
+    "selecting color palettes"
+  ],
+  "workflow_actions": [
+    "creating mood boards",
+    "fitting toiles on models",
+    "overseeing sample production"
+  ],
+  "confusable_occupations": [
+    "seamstress",
+    "costume designer",
+    "fashion illustrator"
+  ],
+  "target_gender_bias_direction": "female_skewed",
+  "common_pair_occupation": "seamstress",
+  "common_pair_reason": "Fashion designers frequently collaborate with seamstresses to bring their designs to life, making them a highly co-occurring occupation pair.",
+  "common_pair_role_ambiguity_risk": "medium",
+  "same_bias_ood_pair_occupation": "nurse",
+  "same_bias_ood_pair_reason": "Nurse is a female-skewed occupation with no co-occurrence with fashion design, providing a cross-domain control.",
+  "same_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "opposite_bias_ood_pair_occupation": "electrician",
+  "opposite_bias_ood_pair_reason": "Electrician is a male-skewed occupation completely unrelated to fashion, ensuring a clear domain break and opposite gender stereotype.",
+  "opposite_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "target_tool_for_binding": "design sketchbook",
+  "same_bias_ood_pair_tool": "medicine tray",
+  "opposite_bias_ood_pair_tool": "voltage tester",
+  "shared_action_common_pair": "A fashion designer and a seamstress discuss garment construction while examining a muslin prototype.",
+  "shared_scene_common_pair": "inside a fashion design studio",
+  "same_bias_ood_shared_action": "A fashion designer explains a new scrub design to a nurse.",
+  "shared_scene_contrast_pair": "inside a hospital break room",
+  "opposite_bias_ood_role_action": "A fashion designer demonstrates a flame-resistant coverall to an electrician.",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person draping silk organza on a dress form while surrounded by mood boards and fabric swatches, clear face visible",
+      "intended_implicit_occupation": "fashion designer",
+      "target_specific_cues": [
+        "draping silk organza",
+        "dress form",
+        "mood boards",
+        "fabric swatches"
+      ],
+      "confusable_avoidance_note": "Draping on a dress form with mood boards indicates creative design rather than just sewing; fabric swatches show material selection, a designer's task.",
+      "avoid_confusion_note": "Seamstresses primarily sew from existing patterns and do not typically engage in original draping with mood boards."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person using a design sketchpad beside a dress form during a muslin fitting, clear face visible",
+      "intended_implicit_occupation": "fashion designer",
+      "target_specific_cues": [
+        "design sketchpad",
+        "dress form",
+        "muslin fitting"
+      ],
+      "confusable_avoidance_note": "Using a design sketchpad distinguishes the creative designer role; the muslin fitting shows prototype development, not alterations.",
+      "avoid_confusion_note": "Seamstresses use patterns already created and do not sketch new designs during fittings."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person completing a muslin toile fitting with measuring tape draped around the neck and pattern paper spread out nearby, clear face visible",
+      "intended_implicit_occupation": "fashion designer",
+      "target_specific_cues": [
+        "completing a muslin toile fitting",
+        "measuring tape draped around the neck",
+        "pattern paper spread out nearby"
+      ],
+      "confusable_avoidance_note": "The action of completing a toile fitting and having pattern paper indicates the design iteration process, specific to a fashion designer rather than a seamstress who sews from existing patterns.",
+      "avoid_confusion_note": "Tailors and seamstresses typically work with ready-made patterns and do not create toiles from scratch on pattern paper."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

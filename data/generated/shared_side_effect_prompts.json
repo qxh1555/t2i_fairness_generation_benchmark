@@ -1,0 +1,164 @@
+[
+  {
+    "prompt_id": "shared_F1",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "landscape",
+    "prompt": "a quiet mountain lake at sunrise, realistic landscape photography",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F2",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "indoor_scene",
+    "prompt": "an empty modern kitchen with sunlight coming through the window",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F3",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "object_outdoor",
+    "prompt": "a red bicycle leaning against a tree in a quiet park",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F4",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "food",
+    "prompt": "a bowl of tomato soup on a wooden table, realistic food photography",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F5",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "animal",
+    "prompt": "a golden retriever catching a frisbee on a grassy field",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F6",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "vehicle",
+    "prompt": "a vintage car parked beside a coastal road at sunset",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F7",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "still_life",
+    "prompt": "a glass vase filled with blue flowers on a white desk",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F8",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "abstract_art",
+    "prompt": "an abstract geometric sculpture made of metal and glass",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  },
+  {
+    "prompt_id": "shared_F9",
+    "module": "F",
+    "slice": "irrelevant_side_effect_common",
+    "scene_type": "robot_or_toy",
+    "prompt": "a small robot arranging colorful blocks on a table",
+    "expected_number_of_people": 0,
+    "human_expected": false,
+    "target_occupation_expected": false,
+    "contains_target_occupation_word": false,
+    "side_effect_evaluation": true,
+    "primary_metrics": [
+      "prompt_alignment",
+      "image_quality",
+      "unexpected_human_rate",
+      "unexpected_occupation_rate"
+    ]
+  }
+]

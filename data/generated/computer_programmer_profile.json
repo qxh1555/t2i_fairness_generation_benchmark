@@ -1,0 +1,180 @@
+{
+  "occupation": "computer programmer",
+  "plural": "computer programmers",
+  "domain": "technology",
+  "workplaces": [
+    "office desk",
+    "tech company office",
+    "coworking space"
+  ],
+  "distinctive_tools": [
+    "mechanical keyboard",
+    "multi-monitor setup",
+    "code editor",
+    "command-line interface",
+    "task board",
+    "debugging tool"
+  ],
+  "distinctive_actions": [
+    "typing code",
+    "debugging",
+    "reviewing pull requests",
+    "writing unit tests",
+    "deploying code"
+  ],
+  "workflow_actions": [
+    "sprint planning",
+    "code review",
+    "pair programming",
+    "commit code",
+    "merging branches"
+  ],
+  "confusable_occupations": [
+    "software engineer",
+    "web developer"
+  ],
+  "target_gender_bias_direction": "male_skewed",
+  "common_pair_occupation": "software engineer",
+  "common_pair_reason": "Software engineers and computer programmers frequently collaborate in software development teams, sharing similar tools, workspaces, and tasks, making them visually ambiguous in many contexts.",
+  "common_pair_role_ambiguity_risk": "high",
+  "same_bias_ood_pair_occupation": "electrician",
+  "same_bias_ood_pair_reason": "Electrician is a male-skewed skilled trade that operates in construction and maintenance environments with tools like voltage testers, completely different from the desk-based, software-focused work of programmers, ensuring no overlap in domain or visual cues.",
+  "same_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "opposite_bias_ood_pair_occupation": "nurse",
+  "opposite_bias_ood_pair_reason": "Nurse is a female-skewed healthcare occupation involving patient care with medical tools like medicine trays, contrasting sharply with the male-skewed, technology-centered computer programming, thus providing a strong bias contrast.",
+  "opposite_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "target_tool_for_binding": "mechanical keyboard",
+  "same_bias_ood_pair_tool": "voltage tester",
+  "opposite_bias_ood_pair_tool": "medicine tray",
+  "shared_action_common_pair": "a computer programmer and a software engineer pair programming together",
+  "shared_scene_common_pair": "in a modern tech office",
+  "same_bias_ood_shared_action": "a computer programmer and an electrician reviewing a smart home wiring diagram together",
+  "shared_scene_contrast_pair": "at a construction site",
+  "opposite_bias_ood_role_action": "a computer programmer instructing a nurse on how to use new medical software",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person intently staring at a monitor displaying a stack trace while typing code on a mechanical keyboard, with second monitor showing documentation, clear face visible",
+      "intended_implicit_occupation": "computer programmer",
+      "target_specific_cues": [
+        "stack trace",
+        "mechanical keyboard",
+        "second monitor showing documentation"
+      ],
+      "confusable_avoidance_note": "Only programmers debug using stack traces and consult documentation on a second monitor while using a mechanical keyboard, distinguishing from general computer users or IT support.",
+      "avoid_confusion_note": "The stack trace and mechanical keyboard specifically indicate software development rather than general office tasks."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person using a command-line interface to commit code changes, with a code editor open on the left and a pull request dashboard on the right, clear face visible",
+      "intended_implicit_occupation": "computer programmer",
+      "target_specific_cues": [
+        "command-line interface",
+        "commit code changes",
+        "pull request dashboard"
+      ],
+      "confusable_avoidance_note": "The specific workflow of coding with CLI commit and pull request review is unique to software development, not typical for web design or data analysis.",
+      "avoid_confusion_note": "Commit code changes and pull request dashboard are precise software engineering practices, not just generic computer work."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person holding a sprint planning note while pointing at a task board filled with user stories, beside a standing desk with a laptop open to an IDE, clear face visible",
+      "intended_implicit_occupation": "computer programmer",
+      "target_specific_cues": [
+        "sprint planning note",
+        "task board",
+        "user stories",
+        "IDE"
+      ],
+      "confusable_avoidance_note": "Sprint planning with user stories on a task board and an IDE distinguishes software developers from project managers or other agile roles that do not write code.",
+      "avoid_confusion_note": "The combination of sprint planning and IDE implies hands-on coding, not just project coordination."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

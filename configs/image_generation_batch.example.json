@@ -1,0 +1,28 @@
+{
+  "occupation": "nurse",
+  "model": "qwen-image-2.0",
+  "size": "2048*2048",
+  "n": 8,
+  "seed": 42,
+  "prompt_extend": false,
+  "watermark": false,
+  "skip_existing": true,
+  "output_dir": "outputs/images",
+  "timeout": 180,
+  "raw_response_dir": "outputs/images/{model_slug}/{occupation_slug}_seed{seed}/raw_responses",
+  "modules": [],
+  "slices": [],
+  "prompt_ids": [],
+  "module_overrides": {
+    "F": {
+      "n": 4,
+      "seed": 42
+    }
+  },
+  "prompt_overrides": {
+    "nurse_A1": {
+      "n": 64,
+      "seed": 42
+    }
+  }
+}

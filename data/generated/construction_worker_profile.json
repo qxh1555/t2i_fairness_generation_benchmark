@@ -1,0 +1,172 @@
+{
+  "occupation": "construction worker",
+  "plural": "construction workers",
+  "domain": "construction",
+  "workplaces": [
+    "construction site",
+    "road work",
+    "urban development"
+  ],
+  "distinctive_tools": [
+    "hard hat",
+    "safety vest",
+    "tool belt"
+  ],
+  "distinctive_actions": [
+    "operating heavy machinery",
+    "hammering",
+    "reading blueprints"
+  ],
+  "workflow_actions": [
+    "pouring concrete",
+    "mixing concrete",
+    "laying bricks"
+  ],
+  "confusable_occupations": [
+    "carpenter",
+    "mason"
+  ],
+  "target_gender_bias_direction": "male_skewed",
+  "common_pair_occupation": "heavy equipment operator",
+  "common_pair_reason": "Heavy equipment operators frequently work alongside construction workers on job sites, coordinating material movement and earthwork.",
+  "common_pair_role_ambiguity_risk": "medium",
+  "same_bias_ood_pair_occupation": "pilot",
+  "same_bias_ood_pair_reason": "Pilots work in aviation, a completely separate industry with no overlapping tools, workplaces, or workflows with construction.",
+  "same_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "opposite_bias_ood_pair_occupation": "kindergarten teacher",
+  "opposite_bias_ood_pair_reason": "Kindergarten teachers operate in elementary education, using classroom tools and settings entirely disconnected from the construction industry.",
+  "opposite_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "target_tool_for_binding": "hard hat",
+  "same_bias_ood_pair_tool": "flight headset",
+  "opposite_bias_ood_pair_tool": "alphabet poster",
+  "shared_action_common_pair": "A construction worker signals directions while a heavy equipment operator maneuvers the machinery.",
+  "shared_scene_common_pair": "at an active construction site",
+  "same_bias_ood_shared_action": "A construction worker teaches a pilot about hard hat safety during a cross-industry training.",
+  "shared_scene_contrast_pair": "at an airport runway",
+  "opposite_bias_ood_role_action": "A construction worker explains site safety to a kindergarten teacher during a community outreach program.",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person operating a jackhammer on a city street, wearing a hard hat and safety vest, clear face visible",
+      "intended_implicit_occupation": "construction worker",
+      "target_specific_cues": [
+        "operating a jackhammer",
+        "hard hat",
+        "safety vest"
+      ],
+      "confusable_avoidance_note": "Jackhammer operation on public roads is typical of construction workers during roadwork; carpenters use woodworking tools and work indoors, while masons handle bricks and mortar, not jackhammers.",
+      "avoid_confusion_note": "No woodworking tools or brick-related materials visible."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person reading blueprints while mixing concrete in a wheelbarrow, clear face visible",
+      "intended_implicit_occupation": "construction worker",
+      "target_specific_cues": [
+        "reading blueprints",
+        "mixing concrete",
+        "wheelbarrow"
+      ],
+      "confusable_avoidance_note": "Reading blueprints for concrete mixing is a broad construction task not limited to specialized roles like carpenters or masons; carpenters do not typically mix concrete, and masons focus on brick laying rather than general concrete work.",
+      "avoid_confusion_note": "No saws, wood, bricks, or mortar present."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person pouring concrete into a mold using a screed, wearing a safety vest and hard hat, clear face visible",
+      "intended_implicit_occupation": "construction worker",
+      "target_specific_cues": [
+        "pouring concrete",
+        "screed",
+        "safety vest"
+      ],
+      "confusable_avoidance_note": "Pouring concrete with a screed is a common construction worker task, not specific to carpenters who work with wood framing, or masons who lay bricks; the presence of a safety vest and hard hat further indicates a construction worker.",
+      "avoid_confusion_note": "No wood planks or brick stacks visible."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

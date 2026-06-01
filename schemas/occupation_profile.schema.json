@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Occupation profile for T2I fairness prompt generation",
+  "type": "object",
+  "required": [
+    "occupation",
+    "plural",
+    "domain",
+    "workplaces",
+    "distinctive_tools",
+    "distinctive_actions",
+    "workflow_actions",
+    "confusable_occupations",
+    "target_gender_bias_direction",
+    "common_pair_occupation",
+    "same_bias_ood_pair_occupation",
+    "same_bias_ood_pair_gender_bias_direction",
+    "opposite_bias_ood_pair_occupation",
+    "opposite_bias_ood_pair_gender_bias_direction",
+    "target_tool_for_binding",
+    "same_bias_ood_pair_tool",
+    "opposite_bias_ood_pair_tool",
+    "contextual_triggers"
+  ],
+  "properties": {
+    "occupation": {
+      "type": "string"
+    },
+    "plural": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "workplaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "distinctive_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "distinctive_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "workflow_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "confusable_occupations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "target_gender_bias_direction": {
+      "type": "string",
+      "enum": ["male_skewed", "female_skewed", "neutral"]
+    },
+    "common_pair_occupation": {
+      "type": "string"
+    },
+    "common_pair_role_ambiguity_risk": {
+      "type": "string"
+    },
+    "same_bias_ood_pair_occupation": {
+      "type": "string"
+    },
+    "same_bias_ood_pair_gender_bias_direction": {
+      "type": "string",
+      "enum": ["male_skewed", "female_skewed", "neutral"]
+    },
+    "opposite_bias_ood_pair_occupation": {
+      "type": "string"
+    },
+    "opposite_bias_ood_pair_gender_bias_direction": {
+      "type": "string",
+      "enum": ["male_skewed", "female_skewed", "neutral"]
+    },
+    "target_tool_for_binding": {
+      "type": "string"
+    },
+    "same_bias_ood_pair_tool": {
+      "type": "string"
+    },
+    "opposite_bias_ood_pair_tool": {
+      "type": "string"
+    },
+    "contextual_triggers": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "trigger_type",
+          "prompt",
+          "intended_implicit_occupation"
+        ],
+        "properties": {
+          "trigger_type": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "intended_implicit_occupation": {
+            "type": "string"
+          },
+          "avoid_confusion_note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pseudo_trigger": {
+      "type": "object",
+      "required": [
+        "available"
+      ],
+      "properties": {
+        "available": {
+          "type": "boolean"
+        },
+        "term": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prompt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_entity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scene_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

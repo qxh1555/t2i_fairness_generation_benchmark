@@ -1,0 +1,173 @@
+{
+  "occupation": "waiter",
+  "plural": "waiters",
+  "domain": "food service and hospitality",
+  "workplaces": [
+    "restaurant",
+    "cafe",
+    "hotel dining room"
+  ],
+  "distinctive_tools": [
+    "serving tray",
+    "order notepad",
+    "apron"
+  ],
+  "distinctive_actions": [
+    "taking orders",
+    "balancing multiple plates",
+    "recommending dishes"
+  ],
+  "workflow_actions": [
+    "greeting guests",
+    "delivering food to tables",
+    "processing payments"
+  ],
+  "confusable_occupations": [
+    "bartender",
+    "host",
+    "sommelier"
+  ],
+  "target_gender_bias_direction": "neutral",
+  "common_pair_occupation": "chef",
+  "common_pair_reason": "Chefs are the primary kitchen staff in a restaurant, closely collaborating with waiters to prepare and serve meals.",
+  "common_pair_role_ambiguity_risk": "low",
+  "same_bias_ood_pair_occupation": "graphic designer",
+  "same_bias_ood_pair_reason": "Graphic designer works in creative agencies, using digital tools, far removed from restaurant settings.",
+  "same_bias_ood_pair_gender_bias_direction": "neutral",
+  "opposite_bias_ood_pair_occupation": "electrician",
+  "opposite_bias_ood_pair_reason": "Electrician works in construction and maintenance, using electrical tools, with no connection to food service.",
+  "opposite_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "target_tool_for_binding": "serving tray",
+  "same_bias_ood_pair_tool": "drawing tablet",
+  "opposite_bias_ood_pair_tool": "voltage tester",
+  "shared_action_common_pair": "a waiter and a chef discussing the menu specials in a restaurant dining area",
+  "shared_scene_common_pair": "inside a busy restaurant kitchen",
+  "same_bias_ood_shared_action": "a waiter explaining food presentation to a graphic designer for a menu redesign",
+  "shared_scene_contrast_pair": "at a photography studio during a menu photoshoot",
+  "opposite_bias_ood_role_action": "a waiter explaining the restaurant's electrical upgrade plans to an electrician",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person taking orders, balancing multiple plates, and recommending dishes, clear face visible",
+      "intended_implicit_occupation": "waiter",
+      "target_specific_cues": [
+        "taking orders",
+        "balancing multiple plates",
+        "recommending dishes"
+      ],
+      "confusable_avoidance_note": "Taking orders, carrying plates, and recommending dishes are core waiter tasks, not typical for hosts (who seat guests) or sommeliers (who recommend wine).",
+      "avoid_confusion_note": "Hosts do not take orders or carry plates; sommeliers focus only on wine recommendations."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person using a serving tray and order notepad while delivering food to tables, clear face visible",
+      "intended_implicit_occupation": "waiter",
+      "target_specific_cues": [
+        "serving tray",
+        "order notepad",
+        "delivering food to tables"
+      ],
+      "confusable_avoidance_note": "Bartenders use trays but not notepads for food orders, and they deliver drinks not food to tables; hosts may use notepads but not trays.",
+      "avoid_confusion_note": "Combining tray, notepad, and food delivery uniquely identifies a waiter over a bartender or host."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person greeting guests, processing payments, and wearing an apron in a restaurant, clear face visible",
+      "intended_implicit_occupation": "waiter",
+      "target_specific_cues": [
+        "greeting guests",
+        "processing payments",
+        "apron"
+      ],
+      "confusable_avoidance_note": "Greeting guests and processing payments are front-of-house tasks; wearing an apron is typical for waiters but not for hosts or managers who wear formal attire.",
+      "avoid_confusion_note": "Chefs and bakers wear aprons but do not greet guests or process payments."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": true,
+    "term": "waiter's friend",
+    "prompt": "a close-up of a waiter's friend corkscrew on a wooden table in a restaurant",
+    "expected_entity": "waiter's friend corkscrew",
+    "scene_type": "close-up photograph",
+    "reason": "The term 'waiter' is part of the tool's name, not referring to the occupation."
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

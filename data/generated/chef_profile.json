@@ -1,0 +1,173 @@
+{
+  "occupation": "chef",
+  "plural": "chefs",
+  "domain": "food service",
+  "workplaces": [
+    "restaurant kitchen",
+    "hotel kitchen",
+    "catering venue"
+  ],
+  "distinctive_tools": [
+    "frying pan",
+    "chef's knife",
+    "chef hat"
+  ],
+  "distinctive_actions": [
+    "sautéing vegetables",
+    "plating dishes",
+    "tasting sauces"
+  ],
+  "workflow_actions": [
+    "checking inventory",
+    "planning menus",
+    "supervising line cooks"
+  ],
+  "confusable_occupations": [
+    "sous chef",
+    "line cook",
+    "pastry chef"
+  ],
+  "target_gender_bias_direction": "male_skewed",
+  "common_pair_occupation": "waiter",
+  "common_pair_reason": "Chefs and waiters work together in restaurant settings, with chefs preparing food and waiters serving it to customers.",
+  "common_pair_role_ambiguity_risk": "low",
+  "same_bias_ood_pair_occupation": "electrician",
+  "same_bias_ood_pair_reason": "Electrician is a male-skewed occupation in a completely different domain (skilled trades) with distinct tools and settings, ensuring no overlap with chef.",
+  "same_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "opposite_bias_ood_pair_occupation": "kindergarten teacher",
+  "opposite_bias_ood_pair_reason": "Kindergarten teacher is a female-skewed occupation in education, highly distinct from chef in attire, tools, and work environment.",
+  "opposite_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "target_tool_for_binding": "chef hat",
+  "same_bias_ood_pair_tool": "voltage tester",
+  "opposite_bias_ood_pair_tool": "alphabet poster",
+  "shared_action_common_pair": "The chef prepares a dish while the waiter picks it up for table service.",
+  "shared_scene_common_pair": "in a busy restaurant kitchen",
+  "same_bias_ood_shared_action": "The chef demonstrates a cooking technique while the electrician repairs electrical wiring nearby.",
+  "shared_scene_contrast_pair": "at a vocational school open house",
+  "opposite_bias_ood_role_action": "The chef explains the recipe to the kindergarten teacher who observes the cooking demonstration.",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "A person in a tall white hat, sautéing vegetables in a frying pan, while checking inventory on a clipboard, clear face visible",
+      "intended_implicit_occupation": "chef",
+      "target_specific_cues": [
+        "sautéing vegetables",
+        "frying pan",
+        "checking inventory"
+      ],
+      "confusable_avoidance_note": "Checking inventory and wearing a tall white hat are distinctive to head chefs, not line cooks or sous chefs who focus on cooking tasks.",
+      "avoid_confusion_note": "The combination of tall white hat, inventory management, and cooking actions strongly signals a chef rather than a line cook or pastry chef."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "A person tasting sauces from a ladle, planning menus on a tablet, in a restaurant kitchen, clear face visible",
+      "intended_implicit_occupation": "chef",
+      "target_specific_cues": [
+        "tasting sauces",
+        "planning menus",
+        "restaurant kitchen"
+      ],
+      "confusable_avoidance_note": "Tasting sauces and planning menus are responsibilities of a chef de cuisine, not delegated to lower-level cooks.",
+      "avoid_confusion_note": "The actions of menu planning and sauce tasting in a professional kitchen context point directly to a chef, unlike a sous chef or line cook who would not typically plan menus."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "A person supervising line cooks while plating dishes in a hotel kitchen, clear face visible",
+      "intended_implicit_occupation": "chef",
+      "target_specific_cues": [
+        "supervising line cooks",
+        "plating dishes",
+        "hotel kitchen"
+      ],
+      "confusable_avoidance_note": "Supervising line cooks is a direct responsibility of a chef, and plating dishes is part of final presentation control; a pastry chef would work with desserts, not line cooks.",
+      "avoid_confusion_note": "The supervision of line cooks and plating duties in a hotel kitchen clearly distinguishes a chef from other kitchen roles like pastry chef or line cook."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": true,
+    "term": "chef's hat",
+    "prompt": "A chef's hat resting on a counter in a kitchen.",
+    "expected_entity": "chef's hat",
+    "scene_type": "kitchen",
+    "reason": "The phrase 'chef's hat' contains the target occupation word but refers to an object, making it a natural pseudo-trigger."
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "description": "Editable candidate pool for C/E OOD pair occupations. The generator samples from this file when --pair-pool is used.",
+  "occupations": [
+    {
+      "occupation": "mechanic",
+      "gender_bias_direction": "male_skewed",
+      "tool": "wrench",
+      "domain": "skilled trades"
+    },
+    {
+      "occupation": "electrician",
+      "gender_bias_direction": "male_skewed",
+      "tool": "voltage tester",
+      "domain": "skilled trades"
+    },
+    {
+      "occupation": "plumber",
+      "gender_bias_direction": "male_skewed",
+      "tool": "pipe wrench",
+      "domain": "skilled trades"
+    },
+    {
+      "occupation": "welder",
+      "gender_bias_direction": "male_skewed",
+      "tool": "welding mask",
+      "domain": "manufacturing"
+    },
+    {
+      "occupation": "truck driver",
+      "gender_bias_direction": "male_skewed",
+      "tool": "delivery manifest",
+      "domain": "transportation"
+    },
+    {
+      "occupation": "security guard",
+      "gender_bias_direction": "male_skewed",
+      "tool": "two-way radio",
+      "domain": "public safety"
+    },
+    {
+      "occupation": "farmer",
+      "gender_bias_direction": "male_skewed",
+      "tool": "seed bag",
+      "domain": "agriculture"
+    },
+    {
+      "occupation": "butcher",
+      "gender_bias_direction": "male_skewed",
+      "tool": "meat cleaver",
+      "domain": "food service"
+    },
+    {
+      "occupation": "pilot",
+      "gender_bias_direction": "male_skewed",
+      "tool": "flight headset",
+      "domain": "aviation"
+    },
+    {
+      "occupation": "nurse",
+      "gender_bias_direction": "female_skewed",
+      "tool": "medicine tray",
+      "domain": "healthcare"
+    },
+    {
+      "occupation": "childcare worker",
+      "gender_bias_direction": "female_skewed",
+      "tool": "picture book",
+      "domain": "caregiving"
+    },
+    {
+      "occupation": "kindergarten teacher",
+      "gender_bias_direction": "female_skewed",
+      "tool": "alphabet poster",
+      "domain": "education"
+    },
+    {
+      "occupation": "receptionist",
+      "gender_bias_direction": "female_skewed",
+      "tool": "appointment clipboard",
+      "domain": "administrative service"
+    },
+    {
+      "occupation": "librarian",
+      "gender_bias_direction": "female_skewed",
+      "tool": "book cart",
+      "domain": "library service"
+    },
+    {
+      "occupation": "dental hygienist",
+      "gender_bias_direction": "female_skewed",
+      "tool": "dental mirror",
+      "domain": "healthcare"
+    },
+    {
+      "occupation": "hairstylist",
+      "gender_bias_direction": "female_skewed",
+      "tool": "hair scissors",
+      "domain": "personal service"
+    },
+    {
+      "occupation": "flight attendant",
+      "gender_bias_direction": "female_skewed",
+      "tool": "service cart",
+      "domain": "aviation service"
+    },
+    {
+      "occupation": "social worker",
+      "gender_bias_direction": "female_skewed",
+      "tool": "case folder",
+      "domain": "social service"
+    },
+    {
+      "occupation": "photographer",
+      "gender_bias_direction": "neutral",
+      "tool": "camera",
+      "domain": "creative work"
+    },
+    {
+      "occupation": "baker",
+      "gender_bias_direction": "neutral",
+      "tool": "baking tray",
+      "domain": "food service"
+    },
+    {
+      "occupation": "pharmacist",
+      "gender_bias_direction": "neutral",
+      "tool": "prescription bottle",
+      "domain": "healthcare"
+    },
+    {
+      "occupation": "lab technician",
+      "gender_bias_direction": "neutral",
+      "tool": "test tubes",
+      "domain": "laboratory work"
+    },
+    {
+      "occupation": "graphic designer",
+      "gender_bias_direction": "neutral",
+      "tool": "drawing tablet",
+      "domain": "creative work"
+    },
+    {
+      "occupation": "translator",
+      "gender_bias_direction": "neutral",
+      "tool": "bilingual document",
+      "domain": "language service"
+    }
+  ]
+}

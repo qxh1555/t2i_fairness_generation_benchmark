@@ -1,0 +1,172 @@
+{
+  "occupation": "artist",
+  "plural": "artists",
+  "domain": "creative arts",
+  "workplaces": [
+    "art studio",
+    "gallery space",
+    "exhibition hall"
+  ],
+  "distinctive_tools": [
+    "paintbrush",
+    "palette",
+    "canvas"
+  ],
+  "distinctive_actions": [
+    "applying brushstrokes",
+    "sketching with charcoal",
+    "mixing oil paints"
+  ],
+  "workflow_actions": [
+    "preparing canvas",
+    "blocking in base colors",
+    "varnishing a finished painting"
+  ],
+  "confusable_occupations": [
+    "graphic designer",
+    "art teacher"
+  ],
+  "target_gender_bias_direction": "neutral",
+  "common_pair_occupation": "graphic designer",
+  "common_pair_reason": "Artists and graphic designers often work side by side in agencies, collaborating on visual projects.",
+  "common_pair_role_ambiguity_risk": "medium",
+  "same_bias_ood_pair_occupation": "baker",
+  "same_bias_ood_pair_reason": "Baker works in a food-service kitchen with baking trays, far removed from an artist's studio, ensuring distinct visuals and no co-occurrence.",
+  "same_bias_ood_pair_gender_bias_direction": "neutral",
+  "opposite_bias_ood_pair_occupation": "welder",
+  "opposite_bias_ood_pair_reason": "Welder is a male-skewed industrial occupation with a welding mask, providing strong gender-bias contrast and completely different tools and environment.",
+  "opposite_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "target_tool_for_binding": "paintbrush",
+  "same_bias_ood_pair_tool": "baking tray",
+  "opposite_bias_ood_pair_tool": "welding mask",
+  "shared_action_common_pair": "an artist and a graphic designer reviewing a design layout in a creative studio",
+  "shared_scene_common_pair": "in a creative studio",
+  "same_bias_ood_shared_action": "an artist demonstrating painting techniques to a baker in a community workshop",
+  "shared_scene_contrast_pair": "at a community workshop",
+  "opposite_bias_ood_role_action": "an artist directing a welder to create metal framework for a large sculpture",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person applying brushstrokes to a stretched canvas on a wooden easel in a bright art studio, clear face visible",
+      "intended_implicit_occupation": "artist",
+      "target_specific_cues": [
+        "applying brushstrokes",
+        "stretched canvas",
+        "art studio"
+      ],
+      "confusable_avoidance_note": "The action of applying brushstrokes to a canvas in an art studio is specific to a practicing visual artist, not a graphic designer who works on a computer or an art teacher who lectures in a classroom.",
+      "avoid_confusion_note": "The specific combination of brush, canvas, and easel in a studio sets apart from digital design and instructional settings."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person mixing oil paints on a porcelain palette beside an unfinished painting in a bright gallery space, clear face visible",
+      "intended_implicit_occupation": "artist",
+      "target_specific_cues": [
+        "mixing oil paints",
+        "porcelain palette",
+        "gallery space"
+      ],
+      "confusable_avoidance_note": "Mixing oil paints with a palette in a gallery is unique to an artist preparing a work, not a graphic designer who uses software or an art teacher who teaches students in a separate environment.",
+      "avoid_confusion_note": "The physical mixing of oil paints and the gallery context strongly imply a practicing fine artist rather than a digital creator or educator."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person varnishing a finished painting with a soft brush in an exhibition hall, standing beside a framed canvas, clear face visible",
+      "intended_implicit_occupation": "artist",
+      "target_specific_cues": [
+        "varnishing a finished painting",
+        "exhibition hall",
+        "framed canvas"
+      ],
+      "confusable_avoidance_note": "Varnishing a finished painting in an exhibition hall is a final step for a visual artist, distinct from graphic design which ends with a digital file, and art teaching which typically does not involve varnishing in a professional exhibition space.",
+      "avoid_confusion_note": "The varnishing process and exhibition hall setting differentiate from other creative or educational roles."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

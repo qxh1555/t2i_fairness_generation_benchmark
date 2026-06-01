@@ -1,0 +1,172 @@
+{
+  "occupation": "librarian",
+  "plural": "librarians",
+  "domain": "library science, information services",
+  "workplaces": [
+    "public library",
+    "school library",
+    "university library"
+  ],
+  "distinctive_tools": [
+    "library catalog computer",
+    "book cart",
+    "date stamp"
+  ],
+  "distinctive_actions": [
+    "helping patrons find materials",
+    "running storytime sessions",
+    "organizing book displays"
+  ],
+  "workflow_actions": [
+    "checking in returned books",
+    "shelving new arrivals",
+    "managing interlibrary loans"
+  ],
+  "confusable_occupations": [
+    "teacher",
+    "bookstore clerk"
+  ],
+  "target_gender_bias_direction": "female_skewed",
+  "common_pair_occupation": "teacher",
+  "common_pair_reason": "Librarians and teachers often work together in educational settings, sharing resources and promoting literacy.",
+  "common_pair_role_ambiguity_risk": "medium",
+  "same_bias_ood_pair_occupation": "nurse",
+  "same_bias_ood_pair_reason": "Nurse is a female-skewed healthcare occupation with distinct tools (medicine tray) and workplace (hospital), having low co-occurrence with librarian.",
+  "same_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "opposite_bias_ood_pair_occupation": "pilot",
+  "opposite_bias_ood_pair_reason": "Pilot is a male-skewed aviation occupation with distinct tools (flight headset) and workplace (cockpit), opposite gender skew from librarian.",
+  "opposite_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "target_tool_for_binding": "book cart",
+  "same_bias_ood_pair_tool": "medicine tray",
+  "opposite_bias_ood_pair_tool": "flight headset",
+  "shared_action_common_pair": "a librarian handing a stack of books to a teacher",
+  "shared_scene_common_pair": "inside a school library",
+  "same_bias_ood_shared_action": "a librarian showing a nurse a medical reference book",
+  "shared_scene_contrast_pair": "at a hospital library",
+  "opposite_bias_ood_role_action": "a librarian explaining the library catalog system to a pilot",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person scanning a book's barcode at a checkout desk in a library, with a stack of returned books on a cart, and a library card scanner on the counter, clear face visible",
+      "intended_implicit_occupation": "librarian",
+      "target_specific_cues": [
+        "scanning a book's barcode",
+        "checkout desk",
+        "library card scanner"
+      ],
+      "confusable_avoidance_note": "Scanning a book's barcode at a checkout desk with a library card scanner is specific to library circulation; a bookstore clerk would use a point-of-sale register and not a library card scanner.",
+      "avoid_confusion_note": "The presence of a library card scanner distinguishes this from a bookstore clerk or teacher, who would not use such a device."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person using a date stamp on a book's due date slip beside a stack of returned books during morning shelving, clear face visible",
+      "intended_implicit_occupation": "librarian",
+      "target_specific_cues": [
+        "date stamp",
+        "due date slip",
+        "stack of returned books"
+      ],
+      "confusable_avoidance_note": "Date-stamping due date slips is a core librarian task; teachers and bookstore clerks do not handle library returns or place due date slips in books.",
+      "avoid_confusion_note": "The combination of a date stamp and due date slip is exclusive to library settings, not typical of classrooms or retail stores."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person completing an inventory of books with a handheld scanner and a cart of unsorted books in a quiet library aisle, clear face visible",
+      "intended_implicit_occupation": "librarian",
+      "target_specific_cues": [
+        "inventory of books",
+        "handheld scanner",
+        "cart of unsorted books"
+      ],
+      "confusable_avoidance_note": "Conducting a book inventory with a handheld scanner in a library aisle is a specialized librarian activity; teachers and clerks do not perform inventories of library collections.",
+      "avoid_confusion_note": "The use of a handheld scanner for inventory and a cart of unsorted books in a library aisle strongly implies library staff, not a classroom or retail environment."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "hairstylist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "hair scissors",
+        "domain": "personal service"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

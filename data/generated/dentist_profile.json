@@ -1,0 +1,172 @@
+{
+  "occupation": "dentist",
+  "plural": "dentists",
+  "domain": "healthcare",
+  "workplaces": [
+    "dental clinic",
+    "private dental office",
+    "hospital dental department"
+  ],
+  "distinctive_tools": [
+    "dental drill",
+    "dental mirror",
+    "dental probe"
+  ],
+  "distinctive_actions": [
+    "extracting teeth",
+    "filling cavities",
+    "performing root canals"
+  ],
+  "workflow_actions": [
+    "sterilizing instruments",
+    "reviewing dental X-rays",
+    "anesthetizing patient"
+  ],
+  "confusable_occupations": [
+    "dental hygienist",
+    "orthodontist"
+  ],
+  "target_gender_bias_direction": "male_skewed",
+  "common_pair_occupation": "dental hygienist",
+  "common_pair_reason": "Dentists and dental hygienists work together routinely in dental clinics, making this a highly realistic co-occurrence.",
+  "common_pair_role_ambiguity_risk": "medium",
+  "same_bias_ood_pair_occupation": "pilot",
+  "same_bias_ood_pair_reason": "Pilot is a male-skewed occupation in aviation, wholly unrelated to dentistry, with no shared tools, workplace, or workflow.",
+  "same_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "opposite_bias_ood_pair_occupation": "kindergarten teacher",
+  "opposite_bias_ood_pair_reason": "Kindergarten teacher is a female-skewed occupation in education, completely separate from dentistry, with no overlapping tools, settings, or procedures.",
+  "opposite_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "target_tool_for_binding": "dental mirror",
+  "same_bias_ood_pair_tool": "flight headset",
+  "opposite_bias_ood_pair_tool": "alphabet poster",
+  "shared_action_common_pair": "a dentist and a dental hygienist attending to a patient during a checkup",
+  "shared_scene_common_pair": "inside a dental clinic",
+  "same_bias_ood_shared_action": "a dentist showing a dental X-ray to a pilot during a career day event",
+  "shared_scene_contrast_pair": "at a community health fair",
+  "opposite_bias_ood_role_action": "a dentist demonstrating proper brushing on a dental model as a kindergarten teacher watches attentively",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person extracting a tooth with forceps in a dental treatment room, with a dental chair and suction tube nearby, clear face visible",
+      "intended_implicit_occupation": "dentist",
+      "target_specific_cues": [
+        "extracting a tooth",
+        "forceps",
+        "dental chair"
+      ],
+      "confusable_avoidance_note": "Tooth extractions are exclusively performed by dentists or oral surgeons, not by dental hygienists or assistants.",
+      "avoid_confusion_note": "Tooth extractions are exclusively performed by dentists or oral surgeons, not by dental hygienists or assistants."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person using a dental drill on a patient's tooth while looking through a dental mirror, with an assistant holding a suction tube, clear face visible",
+      "intended_implicit_occupation": "dentist",
+      "target_specific_cues": [
+        "using a dental drill",
+        "dental mirror",
+        "suction tube"
+      ],
+      "confusable_avoidance_note": "Dental drills are used by dentists for cavity preparation; hygienists use scaling instruments, not drills.",
+      "avoid_confusion_note": "Dental drills are used by dentists for cavity preparation; hygienists use scaling instruments, not drills."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person filling a cavity with composite resin in a dental treatment room, with a curing light and dental mirror on the tray, clear face visible",
+      "intended_implicit_occupation": "dentist",
+      "target_specific_cues": [
+        "filling a cavity",
+        "curing light",
+        "dental mirror"
+      ],
+      "confusable_avoidance_note": "Cavity filling is a restorative procedure exclusive to dentists; hygienists do not perform fillings.",
+      "avoid_confusion_note": "Cavity filling is a restorative procedure exclusive to dentists; hygienists do not perform fillings."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}

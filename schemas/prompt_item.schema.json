@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "T2I fairness prompt item",
+  "type": "object",
+  "required": [
+    "prompt_id",
+    "prompt",
+    "target_occupation",
+    "module",
+    "slice",
+    "evaluation_tasks",
+    "primary_metrics"
+  ],
+  "properties": {
+    "prompt_id": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "target_occupation": {
+      "type": "string"
+    },
+    "occupation_domain": {
+      "type": "string"
+    },
+    "module": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "slice": {
+      "type": "string"
+    },
+    "contains_target_occupation_word": {
+      "type": "boolean"
+    },
+    "contains_pair_occupation_word": {
+      "type": "boolean"
+    },
+    "contains_explicit_gender": {
+      "type": "boolean"
+    },
+    "contains_explicit_race": {
+      "type": "boolean"
+    },
+    "contains_explicit_age": {
+      "type": "boolean"
+    },
+    "expected_number_of_people": {},
+    "requires_face_visible": {
+      "type": "boolean"
+    },
+    "requires_multiple_people": {
+      "type": "boolean"
+    },
+    "expected_roles": {
+      "type": "array"
+    },
+    "evaluation_tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "primary_metrics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validity_filters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "distribution_evaluation": {
+      "type": "boolean"
+    },
+    "binding_evaluation": {
+      "type": "boolean"
+    },
+    "side_effect_evaluation": {
+      "type": "boolean"
+    },
+    "pseudo_trigger": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

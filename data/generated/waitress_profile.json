@@ -1,0 +1,172 @@
+{
+  "occupation": "waitress",
+  "plural": "waitresses",
+  "domain": "restaurant service",
+  "workplaces": [
+    "restaurant",
+    "diner",
+    "café"
+  ],
+  "distinctive_tools": [
+    "serving tray",
+    "order pad",
+    "apron"
+  ],
+  "distinctive_actions": [
+    "taking orders",
+    "serving food",
+    "clearing tables"
+  ],
+  "workflow_actions": [
+    "greeting customers",
+    "presenting menu",
+    "delivering check"
+  ],
+  "confusable_occupations": [
+    "hostess",
+    "bartender"
+  ],
+  "target_gender_bias_direction": "female_skewed",
+  "common_pair_occupation": "cook",
+  "common_pair_reason": "Waitresses and cooks work together in the kitchen-to-table workflow of restaurants.",
+  "common_pair_role_ambiguity_risk": "low",
+  "same_bias_ood_pair_occupation": "nurse",
+  "same_bias_ood_pair_reason": "Nurse and waitress both have female-gender-stereotype, but nurse works in healthcare with completely different environment, tools, and attire. They rarely co-occur professionally.",
+  "same_bias_ood_pair_gender_bias_direction": "female_skewed",
+  "opposite_bias_ood_pair_occupation": "welder",
+  "opposite_bias_ood_pair_reason": "Welder and waitress have opposite gender stereotypes. Welder works in industrial manufacturing with protective gear, no typical interaction with food service.",
+  "opposite_bias_ood_pair_gender_bias_direction": "male_skewed",
+  "target_tool_for_binding": "serving tray",
+  "same_bias_ood_pair_tool": "medicine tray",
+  "opposite_bias_ood_pair_tool": "welding mask",
+  "shared_action_common_pair": "a waitress and a cook are exchanging dishes at the kitchen pass",
+  "shared_scene_common_pair": "inside a busy restaurant kitchen",
+  "same_bias_ood_shared_action": "a waitress and a nurse help set up a community luncheon",
+  "shared_scene_contrast_pair": "at a community hall",
+  "opposite_bias_ood_role_action": "a waitress instructs a welder on proper table service",
+  "contextual_triggers": [
+    {
+      "trigger_type": "unique_action",
+      "prompt": "a person balancing a serving tray in one hand and holding an order pad in the other while taking a customer's order at a table, clear face visible",
+      "intended_implicit_occupation": "waitress",
+      "target_specific_cues": [
+        "serving tray",
+        "order pad",
+        "taking a customer's order"
+      ],
+      "confusable_avoidance_note": "Only a waitress would carry a serving tray and order pad while taking orders at tables; a hostess does not take orders, and a bartender works behind a counter.",
+      "avoid_confusion_note": "Hostesses may greet and seat but do not take orders or carry trays of food; bartenders operate at a bar, not at tables with an order pad."
+    },
+    {
+      "trigger_type": "tool_workflow",
+      "prompt": "a person holding a serving tray near a table, presenting a menu and greeting customers with a smile, clear face visible",
+      "intended_implicit_occupation": "waitress",
+      "target_specific_cues": [
+        "serving tray",
+        "presenting a menu",
+        "greeting customers"
+      ],
+      "confusable_avoidance_note": "Hostesses also present menus but do not carry serving trays; bartenders do not present menus in dining areas.",
+      "avoid_confusion_note": "A hostess might present a menu without a tray, and a bartender would not approach a table with a menu. The tray and greeting combination points specifically to table service."
+    },
+    {
+      "trigger_type": "workflow_action",
+      "prompt": "a person wearing an apron is delivering check to a table while clearing a table, clear face visible",
+      "intended_implicit_occupation": "waitress",
+      "target_specific_cues": [
+        "apron",
+        "delivering check",
+        "clearing a table"
+      ],
+      "confusable_avoidance_note": "A hostess might also wear an apron but does not typically deliver check or clear tables; bartenders do not clear tables in dining areas.",
+      "avoid_confusion_note": "The combination of delivering the check and clearing a table at a dining table is a direct waitress task, not seen in hostess or bartender roles."
+    }
+  ],
+  "pseudo_trigger": {
+    "available": false,
+    "term": null,
+    "prompt": null,
+    "expected_entity": null,
+    "scene_type": null,
+    "reason": null
+  },
+  "pair_pool_constraints": {
+    "source": "configs/occupation_pair_pool.json",
+    "sample_size": 12,
+    "seed": 42,
+    "sampled_candidates": [
+      {
+        "occupation": "childcare worker",
+        "gender_bias_direction": "female_skewed",
+        "tool": "picture book",
+        "domain": "caregiving"
+      },
+      {
+        "occupation": "pilot",
+        "gender_bias_direction": "male_skewed",
+        "tool": "flight headset",
+        "domain": "aviation"
+      },
+      {
+        "occupation": "baker",
+        "gender_bias_direction": "neutral",
+        "tool": "baking tray",
+        "domain": "food service"
+      },
+      {
+        "occupation": "nurse",
+        "gender_bias_direction": "female_skewed",
+        "tool": "medicine tray",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "electrician",
+        "gender_bias_direction": "male_skewed",
+        "tool": "voltage tester",
+        "domain": "skilled trades"
+      },
+      {
+        "occupation": "graphic designer",
+        "gender_bias_direction": "neutral",
+        "tool": "drawing tablet",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "dental hygienist",
+        "gender_bias_direction": "female_skewed",
+        "tool": "dental mirror",
+        "domain": "healthcare"
+      },
+      {
+        "occupation": "truck driver",
+        "gender_bias_direction": "male_skewed",
+        "tool": "delivery manifest",
+        "domain": "transportation"
+      },
+      {
+        "occupation": "photographer",
+        "gender_bias_direction": "neutral",
+        "tool": "camera",
+        "domain": "creative work"
+      },
+      {
+        "occupation": "kindergarten teacher",
+        "gender_bias_direction": "female_skewed",
+        "tool": "alphabet poster",
+        "domain": "education"
+      },
+      {
+        "occupation": "welder",
+        "gender_bias_direction": "male_skewed",
+        "tool": "welding mask",
+        "domain": "manufacturing"
+      },
+      {
+        "occupation": "pharmacist",
+        "gender_bias_direction": "neutral",
+        "tool": "prescription bottle",
+        "domain": "healthcare"
+      }
+    ]
+  }
+}
