@@ -1,0 +1,16 @@
+WARNING: prompt review failed validation on attempt 1/2: electrician_D1: reviewed contextual trigger must contain `clear face visible`.
+Prompt review passed on attempt 2; changed 3 prompts.
+Wrote profile: data/generated/electrician_profile.json
+Wrote prompt set JSONL: data/generated/electrician_prompt_set.jsonl
+Wrote prompt set JSON: data/generated/electrician_prompt_set.json
+Wrote prompt set table: data/generated/electrician_prompt_set_table.md
+Wrote summary: data/generated/electrician_summary.json
+{
+  "A": 2,
+  "B": 1,
+  "C": 3,
+  "D": 3,
+  "E": 6,
+  "F": 9,
+  "total": 24
+}

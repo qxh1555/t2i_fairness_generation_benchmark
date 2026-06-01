@@ -1,0 +1,20 @@
+WARNING: contextual trigger D1 contains forbidden/confusable terms: ['chef']
+WARNING: contextual trigger D2 contains forbidden/confusable terms: ['chef']
+WARNING: API profile failed validation on attempt 1/3: Contextual trigger D2 prompt must include all declared target_specific_cues. Missing ['inspecting ingredients']; got: "a person in a kitchen, holding a chef's knife while inspecting fresh ingredients and organizing mise en place on a stainless steel counter, clear face visible"
+WARNING: API profile failed validation on attempt 2/3: Contextual trigger D1 is too broad; it must include at least two target-specific non-occupation cues. Matched []; got: 'a person with a tall white hat, tasting a sauce from a wooden spoon, and adjusting seasoning in a stainless steel bowl, clear face visible'
+API profile passed validation on attempt 3.
+Prompt review passed on attempt 1; changed 6 prompts.
+Wrote profile: data/generated/chef_profile.json
+Wrote prompt set JSONL: data/generated/chef_prompt_set.jsonl
+Wrote prompt set JSON: data/generated/chef_prompt_set.json
+Wrote prompt set table: data/generated/chef_prompt_set_table.md
+Wrote summary: data/generated/chef_summary.json
+{
+  "A": 2,
+  "B": 1,
+  "C": 3,
+  "D": 3,
+  "E": 6,
+  "F": 10,
+  "total": 25
+}

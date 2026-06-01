@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 1152, in <module>
+    main()
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 1106, in main
+    profile = generate_valid_profile_from_api(
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 480, in generate_valid_profile_from_api
+    profile = call_openai_compatible_api(occupation, feedback, pair_pool_candidates)
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 464, in call_openai_compatible_api
+    return api_chat_json(
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 190, in api_chat_json
+    resp = requests.post(url, headers=headers, json=payload, timeout=timeout)
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/requests/sessions.py", line 749, in send
+    r.content
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/requests/models.py", line 904, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/urllib3/response.py", line 1250, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/urllib3/response.py", line 1418, in read_chunked
+    self._update_chunk_length()
+  File "/root/miniconda3/envs/infer/lib/python3.10/site-packages/urllib3/response.py", line 1333, in _update_chunk_length
+    line = self._fp.fp.readline()  # type: ignore[union-attr]
+  File "/root/miniconda3/envs/infer/lib/python3.10/socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/infer/lib/python3.10/ssl.py", line 1307, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/infer/lib/python3.10/ssl.py", line 1163, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

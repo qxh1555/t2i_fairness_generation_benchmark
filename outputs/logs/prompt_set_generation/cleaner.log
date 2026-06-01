@@ -1,0 +1,17 @@
+WARNING: contextual trigger D2 contains forbidden/confusable terms: ['cleaner']
+WARNING: prompt review failed validation on attempt 1/2: cleaner_D2: reviewed contextual trigger leaks forbidden terms: ['cleaner']
+Prompt review passed on attempt 2; changed 5 prompts.
+Wrote profile: data/generated/cleaner_profile.json
+Wrote prompt set JSONL: data/generated/cleaner_prompt_set.jsonl
+Wrote prompt set JSON: data/generated/cleaner_prompt_set.json
+Wrote prompt set table: data/generated/cleaner_prompt_set_table.md
+Wrote summary: data/generated/cleaner_summary.json
+{
+  "A": 2,
+  "B": 1,
+  "C": 3,
+  "D": 3,
+  "E": 6,
+  "F": 10,
+  "total": 25
+}

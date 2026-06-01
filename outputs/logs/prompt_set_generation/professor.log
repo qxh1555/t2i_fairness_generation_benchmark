@@ -1,0 +1,12 @@
+WARNING: API profile failed validation on attempt 1/3: Contextual trigger D2 prompt must include all declared target_specific_cues. Missing ['grading research papers']; got: 'a person using a red pen to grade research papers beside a stack of academic journals during office hours in a faculty office, clear face visible'
+API profile passed validation on attempt 2.
+WARNING: prompt review failed validation on attempt 1/2: professor_C3: reviewed prompt must preserve pair occupation `nurse`.
+WARNING: prompt review failed validation on attempt 2/2: professor_C3: reviewed prompt must preserve pair occupation `nurse`.
+Traceback (most recent call last):
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 1169, in <module>
+    main()
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 1144, in main
+    items = review_prompt_set_with_api(profile, items, max_attempts=args.review_max_attempts)
+  File "/root/sd_benchmark/t2i_fairness_promptset_package/scripts/generate_prompt_set.py", line 659, in review_prompt_set_with_api
+    raise RuntimeError(f"Prompt review failed validation after {max_attempts} attempts: {last_error}")
+RuntimeError: Prompt review failed validation after 2 attempts: professor_C3: reviewed prompt must preserve pair occupation `nurse`.
